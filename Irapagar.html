@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="pagar.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <form action="pay.php" method="POST">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Direccion de Facturacion</h3>
+
+                <div class="inputBox">
+                    <span for="nombre">Nombre Completo :</span>
+                    <input type="text" name="nombre" id="nombre" placeholder="Fulanito de tal">
+                </div>
+                <div class="inputBox">
+                    <span for="email">Correo Electronico :</span>
+                    <input type="email" name="email" id="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span for="direccion">Direccion :</span>
+                    <input type="text" name="direccion" id="direccion" placeholder="Calle - Distrito - Ciudad">
+                </div>
+                <div class="inputBox">
+                    <span for="ciudad">Ciudad :</span>
+                    <input type="text" name="ciudad" id="ciudad" placeholder="Arequipa">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span for="estado">Estado :</span>
+                        <input type="text" name="estado" id="estado" placeholder="Peru">
+                    </div>
+                    <div class="inputBox">
+                        <span for="postal">Codigo Postal :</span>
+                        <input type="text" name="postal" id="postal" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Pago</h3>
+                <div class="inputBox">
+                    <span>Tarjetas Aceptadas :</span>
+                    <img src="card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span for="nomtar">Nombre En La Tarjeta :</span>
+                    <input type="text" name="nomtar" id="nomtar" placeholder="Sr. Fulanito">
+                </div>
+                <div class="inputBox">
+                    <span for="numtar">Numero de Tarjeta De Credito :</span>
+                    <input type="number" name="numtar" id="numtar" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span for="mesexp">Mes de Expiracion :</span>
+                    <input type="text" name="mesexp" id="mesexp" placeholder="Enero">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span for="aexp">Año de Expiracion :</span>
+                        <input type="number" name="aexp" id="aexp" placeholder="2023">
+                    </div>
+                    <div class="inputBox">
+                        <span for="cvv">CVV :</span>
+                        <input type="text" name="cvv" id="cvv" placeholder="12">
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        
+        <input type="submit" value="Proceder Con El Pago" class="submit-btn">
+
+    </form>
+
+</div>    
+    
+</body>
+</html>

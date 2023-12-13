@@ -1,0 +1,516 @@
+/*-------------Insertamos google fonts-------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+:root{
+    --prime: #bc0ec2;
+}
+body{
+    background-color: #131b2b;
+}
+/*--------Style navbar-------------*/
+.navbar{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    padding: 30px 120px;
+    background-color: transparent;
+    justify-content: space-between;
+    z-index: 1111;
+    transition: 0.5% ease;
+}
+.logo{
+    font-size: 2.8em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+ol{
+    display: flex;
+    margin: auto 0;
+}
+ol li{
+    list-style: none;
+    margin-right: 20px;
+}
+ol li a{
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+ol li:hover a{
+    color:blueviolet;
+}
+/*--------Tamaño comun para todas las secciones--------*/
+.view{
+    width: 100%;
+    min-height: 80vh;
+    position: relative;
+}
+
+/*--------Seccion Inicio estilo--------*/
+.home{
+    display: flex;
+    min-height: 120vh;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0,100% 0,100% 100%,80% 95%,0 100%);
+}
+.banner{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url(imagenes/FONDO.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%);
+}
+.highlights{
+    width: 70%;
+    position: relative;
+    display: inline-block;
+    z-index: 11;
+}
+.highlights h3{
+    display: inline;
+    font-size: 2vw;
+    padding: 5px 20px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    border-left: 6px solid var(--prime);
+}
+.highlights h1{
+    font-size: 9vw;
+    text-align: center;
+    font-weight: normal;
+}
+.highlights b{
+    color:var(--prime);
+    font-weight: 800;
+    font-family: sans-serif;
+}
+.highlights .tagline{
+    color: #d7d7d7;
+    font-size: 1.2vw;
+    text-align: center;
+    font-weight: normal; 
+}
+.highlights .join{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 800;
+    padding: 5px 20px;
+    font-size: 1.5vw;
+    margin-top: 1.2em;
+    color: var(--prime);
+    border-radius: 50px;
+    background: transparent;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+.highlights .join:hover{
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    background: var(--prime);
+}
+/*--------Estilos comunes para todas las secciones--------*/
+.main{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.main h2{
+    font-size: 2.5vw;
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    display: inline-block;
+}
+span{
+    color: var(--prime);
+}
+.main h2::before{
+    position: absolute;
+    content: '';
+    background: var(--prime);
+    height: 3px;
+    width: 30%;
+    right: -15px;
+    bottom: 0;
+    border-radius: 50px;
+}
+.main h6{
+    margin-top: 10px;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+.content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 0 30px;
+    justify-content: center;
+}
+/*--------Estilo sobre la seccion--------*/
+.about .content .cols{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 70px;
+}
+.about .content .cols p b{
+    font-size: 20px;
+    margin-right: 2px;
+}
+.about .content .cols a{
+    position: relative;
+    top: 20px;
+    color: #fff;
+    background: var(--prime);
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.about .content .cols a:hover{
+    color: #000;
+    background: #fff;
+}
+.about .content .cols .box{
+    position: relative;
+    height: 550px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+.about .content .cols .box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/*--------seccion Entrenamiento de estilo/judadores estrellas--------*/
+.stars .content{
+    flex-wrap: wrap;
+}
+.stars .content .frame{
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    margin: 10px;
+    background: #222;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);   
+}
+.stars .content .frame .box{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+.stars .content .frame .box img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: 0.2% ease-in;
+}
+.stars .content .frame .box:hover img{
+    filter: brightness(100%);
+    transform: scale(1.08);
+}
+.stars .content .frame .title{
+    color: var(--prime);
+    padding: 5px 0;
+}
+.stars .content .frame p{
+    font-size: 0.8em;
+}
+.stars .content .frame .boton {
+    background-color: #dd940b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    display: block; 
+    margin: 0 auto; 
+}
+
+.stars .content .frame .precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f0ebeb;
+    margin-top: 5px;
+}
+/*--------seccion Entrenadores de estilo/ FASE ELIMINATORIA --------*/
+.etapas .content .cols{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px 70px;
+}
+.etapas .content .cols p b{
+    font-size: 20px;
+    margin-right: 2px;
+}
+.etapas .content .cols a{
+    position: relative;
+    top: 20px;
+    color: #fff;
+    background: var(--prime);
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.etapas .content .cols a:hover{
+    color: #000;
+    background: #fff;
+}
+.etapas .content .cols .box{
+    position: relative;
+    height: 550px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+.etapas .content .cols .box video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.etapas .content .title{
+    color: var(--prime);
+    padding: 5px 0;
+}
+.video {
+    flex: 1;
+    padding: 20px;
+}
+
+.info {
+    background-color: #f2f2f2;
+}
+
+.video {
+    background-color: #e0e0e0;
+}
+
+/* Estilos adicionales para el video */
+video {
+    width: 100%;
+    height: auto;
+}
+.etapas .content .frame .title{
+    color: var(--prime);
+    padding: 5px 0;
+}
+/*--------seccion DESCRIPCION DE LOS CAMPEONES--------*/
+.clubes .content{
+    flex-wrap: wrap;
+}
+.clubes .content .frame{
+    position: relative;
+    width: 500px;
+    padding: 30px 30px 40px 30px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    margin: 10px;
+    background: #222;
+}
+.clubes .content .frame .box{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+.clubes .content .frame .box img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: grayscale(1);
+    object-fit: cover;
+    transition: 0.2% ease-in;
+}
+.clubes .content .frame .box:hover img{
+    filter: grayscale(0);
+    transform: scale(1.08);
+}
+.clubes .content .frame .headline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+.clubes .content .frame .headline i{
+    height: 22px;
+    width: 22px;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    line-height: 22px;
+}
+.clubes .content .frame .headline i:hover{
+    border: 1.5px solid var(--prime);
+    background: var(--prime);
+}
+.clubes .content .frame .headline .title{
+    color: var(--prime);
+    font-size: 1.2em;
+}
+.clubes .content .frame p{
+    font-size: 0.8em;
+    position: relative;
+    bottom: 5px;
+}
+.clubes .content .frame a{
+    top: 20px;
+    color:var(--prime);
+    background: transparent;
+    padding: 5px 20px;
+    border: 1.5px solid var(--prime);
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    text-transform: capitalize;
+    transition: 0.2% ease;
+}
+.clubes .content .frame a:hover{
+    color: #fff;
+    background: var(--prime);
+}
+/*----Servicios----*/
+/* Estilos para los servicios */
+.servicio {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #0c0c0c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Transición para los efectos hover */
+}
+
+.servicio img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    filter: grayscale(1); /* Escala de grises inicial */
+    transition: all 0.3s ease; /* Transición para los efectos hover */
+}
+
+/* Efecto de hover */
+.servicio:hover {
+    transform: scale(1.08);
+}
+
+.servicio:hover img {
+    filter: grayscale(0);
+}
+
+/* Estilos para el contenido */
+.servicio h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.servicio p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/*--------FOOTER--------*/
+footer{
+    background: #343434;
+    padding-top: 50px;
+}
+.containeer{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    width: 33.3%;
+}
+h4{
+    font-size: 28px;
+    margin: 15px;
+    text-align: center;
+}
+.footer-content p{
+    width: 190px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+.list li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: -5s;
+}
+.list li:hover::before{
+    width: 70px;
+}
+.social-icons{
+    text-align: center;
+    padding: 0;
+}
+.social-icons li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+.social-icons i{
+    color: white;
+    font-size: 25px;
+}
+.social-icons a {
+    text-decoration: none;
+    color: #fff; /* Cambia el color de los íconos a tu elección */
+    font-size: 25px;
+}
+a:hover{
+    color: #f18930;
+}
+.social-icons i:hover{
+    color: #f18930;
+}
